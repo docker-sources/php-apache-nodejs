@@ -25,7 +25,6 @@ Consulte a guia [Tags](https://hub.docker.com/r/fabiojanio/php-apache-nodejs/tag
  - Node.js 8.9
  - NPM
  - curl
- - GNUPG
  - unzip
  - git
 
