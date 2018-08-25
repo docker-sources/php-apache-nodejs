@@ -62,6 +62,8 @@ Lista de módulos ativos presentes na imagem:
  - Reflection
  - session
  - SimpleXML
+ - soap
+ - sockets
  - SPL
  - sqlite3
  - standard
