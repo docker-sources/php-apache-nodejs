@@ -3,7 +3,6 @@ FROM php:7.2-apache
 MAINTAINER Fabio J L Ferreira <fabiojaniolima@gmail.com>
 
 # Pode assumir "prod" ou "dev"
-# Default: prod
 ENV TIPO_AMBIENTE=prod
 
 # Instala e configura componentes essenciais
@@ -12,6 +11,7 @@ RUN apt-get update && \
     apt-get install -y gnupg unzip git && \
     curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
     apt-get install -y nodejs && \
+    npm install -g npm@latest && \
     apt-get install -y --no-install-recommends unzip git && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer; \
     echo "America/Sao_Paulo" > /etc/timezone; \

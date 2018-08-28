@@ -19,14 +19,16 @@ Consulte a guia [Tags](https://hub.docker.com/r/fabiojanio/php-apache-nodejs/tag
 
 ## Pacotes presentes na imagem
 
- - Apache 2.4
- - PHP 7.2
+ - Apache 2.4.25
+ - PHP 7.2.9
  - Composer
- - Node.js 8.9
- - NPM
+ - Node.js 8.11.4
+ - NPM 6.4.0
  - curl
  - unzip
  - git
+
+ > Obs: as versões citadas acima são referentes a compilação atual desta imagem. O script de *build* foi criado de modo a permitir atualizações menores (*minor*) de forma transparente a cada nova *build*.
 
 ## Módulos PHP ativos
 
@@ -79,9 +81,9 @@ Lista de módulos ativos presentes na imagem:
  - **php.ini** limpo e definido como *dev* ou *prod*
  - **TIPO_AMBIENTE** define o tipo de container (*dev* ou *prod*)
 
-A variável de ambiente **TIPO_AMBIENTE** PODE assumir o valor **prod** ou **dev**, por padrão assume **prod**. Com base nessa atribuição de valor, flags de erro do PHP e definições especificas do Apache serão aplicadas, consulte o diretório [**config**](config).
+A variável de ambiente **TIPO_AMBIENTE** PODE assumir o valor **prod** ou **dev**, por padrão assume **prod**. Com base nessa atribuição de valor, flags de erro do PHP e definições especificas do Apache serão aplicadas, consulte o diretório [**config**](https://github.com/docker-sources/php-apache-nodejs/tree/master/config).
 
-**Sugestão**: Você PODE utilizar um volume compartilhado para os arquivos de **VirtualHost** do Apache, essa abordagem pode ser bem vinda em ambiente de desenvolvimento, onde nem sempre faz sentido ter multiplus containers. Para um exemplo prático consultei o arquivo [**docker-compose.yml**](docker-compose.yml).
+**Sugestão**: Você PODE utilizar um volume compartilhado para os arquivos de **VirtualHost** do Apache, essa abordagem pode ser bem vinda em ambiente de desenvolvimento, onde nem sempre faz sentido ter multiplus containers. Para um exemplo prático consultei o arquivo [**docker-compose.yml**](https://github.com/docker-sources/php-apache-nodejs/blob/master/docker-compose.yml).
 
 ## Start container
 
@@ -109,7 +111,7 @@ docker exec -it nome_do_container /bin/bash
 
 ## docker-compose.yml
 
-Para subir o ambiente utilizando o docker-compose, efetue o download do arquivo [**docker-compose.yml**](docker-compose.yml), acesse o diretório onde o arquivo foi baixado e execute:
+Para subir o ambiente utilizando o docker-compose, efetue o download do arquivo [**docker-compose.yml**](https://github.com/docker-sources/php-apache-nodejs/blob/master/docker-compose.yml), acesse o diretório onde o arquivo foi baixado e execute:
 
 ```
 docker-compose up -d
@@ -123,7 +125,7 @@ docker exec -it nome_do_container /bin/bash
 
 ## Build (opcional)
 
-Os passos anteriores estão configurados para utilizar a imagem já compilada disponível no **Docker Hub**, entretanto, caso queira compilar sua própria imagem, basta efetuar o download do arquivo [**Dockerfile**](Dockerfile) e executar a instrução:
+Os passos anteriores estão configurados para utilizar a imagem já compilada disponível no **Docker Hub**, entretanto, caso queira compilar sua própria imagem, basta efetuar o download do arquivo [**Dockerfile**](https://github.com/docker-sources/php-apache-nodejs/blob/master/Dockerfile) e executar a instrução:
 
 ```
 docker build -t nome_da_nova_imagem:nome_da_tag .
@@ -143,4 +145,4 @@ docker exec -it nome_do_container /bin/bash
 
 ## Licença MIT
 
-Para maiores informações, leia o arquivo de [licença](LICENSE) disponível neste repositório.
+Para maiores informações, leia o arquivo de [licença](https://github.com/docker-sources/php-apache-nodejs/blob/master/LICENSE) disponível neste repositório.
