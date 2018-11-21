@@ -26,6 +26,7 @@ Consulte a guia [Tags](https://hub.docker.com/r/fabiojanio/php-apache-nodejs/tag
  - NPM 6.*
  - curl
  - unzip
+ - gnupg
 
  > Obs: as versões citadas acima são referentes a compilação atual desta imagem. O script de *build* foi criado de modo a permitir atualizações menores (*minor*) de forma transparente a cada nova *build*.
 
