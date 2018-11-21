@@ -1,4 +1,4 @@
-# php-apache-nodejs:7.2-stretch
+# php-apache-nodejs:7.2-slim
 
 <p align="center">
 	<img alt="logo-docker" class="avatar rounded-2" height="150" src="https://avatars2.githubusercontent.com/u/35675959?s=400&u=b1f9ebca6fa8e5be55cb524e16f38b52f2f1dd58&v=4" width="160">
@@ -20,13 +20,12 @@ Consulte a guia [Tags](https://hub.docker.com/r/fabiojanio/php-apache-nodejs/tag
 ## Pacotes presentes na imagem
 
  - Apache 2.4.25
- - PHP 7.2.9
+ - PHP 7.2.*
  - Composer
- - Node.js 8.11.4
- - NPM 6.4.0
+ - Node.js 10.*
+ - NPM 6.*
  - curl
  - unzip
- - git
 
  > Obs: as versões citadas acima são referentes a compilação atual desta imagem. O script de *build* foi criado de modo a permitir atualizações menores (*minor*) de forma transparente a cada nova *build*.
 
@@ -46,6 +45,7 @@ Lista de módulos ativos presentes na imagem:
  - gd
  - hash
  - iconv
+ - intl
  - json
  - libxml
  - mbstring
