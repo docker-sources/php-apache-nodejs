@@ -1,4 +1,4 @@
-FROM php:7.2-apache
+FROM php:7.4-apache
 
 MAINTAINER Fabio J L Ferreira <fabiojaniolima@gmail.com>
 
@@ -9,9 +9,8 @@ ENV TIPO_AMBIENTE=prod
 RUN apt-get update && \
     a2enmod rewrite && \
     apt-get install -y --no-install-recommends gnupg unzip && \
-    curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
+    curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
     apt-get install -y --no-install-recommends nodejs && \
-    npm install -g npm@latest && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer; \
     echo "America/Sao_Paulo" > /etc/timezone; \
     apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false gnupg; \

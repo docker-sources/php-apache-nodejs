@@ -15,7 +15,7 @@ services:
 
   web:
     container_name: web
-    image: fabiojanio/php-apache-nodejs:7.2-stretch
+    image: fabiojanio/php-apache-nodejs:7.4-debian
     environment:
       # PODE ser prod ou dev, por default assume prod
       - TIPO_AMBIENTE=prod

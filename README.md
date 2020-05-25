@@ -1,4 +1,4 @@
-# php-apache-nodejs:7.2-slim
+# php-apache-nodejs:7.4-debian
 
 <p align="center">
 	<img alt="logo-docker" class="avatar rounded-2" height="150" src="https://avatars2.githubusercontent.com/u/35675959?s=400&u=b1f9ebca6fa8e5be55cb524e16f38b52f2f1dd58&v=4" width="160">
@@ -19,10 +19,10 @@ Consulte a guia [Tags](https://hub.docker.com/r/fabiojanio/php-apache-nodejs/tag
 
 ## Pacotes presentes na imagem
 
- - Apache 2.4.25
- - PHP 7.2.*
+ - Apache 2.4.38
+ - PHP 7.4.*
  - Composer
- - Node.js 10.*
+ - Node.js 12.*
  - NPM 6.*
  - curl
  - unzip
@@ -111,7 +111,7 @@ Agora basta chamar o arquivo no navegador e o cache será esvaziado.
 Execute essa instrução para montar um volume compartilhado entre *host* e *container*:
 
 ```
-docker run -v /projeto:/var/www -d -p 80:80 --name nome_do_container fabiojanio/php-apache-nodejs:7.2-stretch
+docker run -v /projeto:/var/www -d -p 80:80 --name nome_do_container fabiojanio/php-apache-nodejs:7.4-debian
 ```
 
 **Obs**: no lugar de */projeto* você DEVE informar o caminho absoluto do diretório a ser compartilhado com o container.
